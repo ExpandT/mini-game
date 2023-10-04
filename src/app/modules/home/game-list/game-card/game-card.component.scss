@@ -1,0 +1,15 @@
+.game-card {
+  width: 250px;
+  height: 250px;
+  border: #acb7b7 1px solid;
+  background-color: #F4F5F8;
+  box-shadow: 0 9px 12px rgba(46, 143, 240, 0.1607843137);
+  text-align: center;
+  border-radius: 6px;
+  margin-right: 12px;
+  margin-top: 12px;
+
+  img {
+    width: 128px;
+  }
+}

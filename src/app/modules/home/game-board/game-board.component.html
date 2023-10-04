@@ -1,0 +1,28 @@
+<button class="blue-button" [routerLink]="NavigationPaths.BACK"> < Назад</button>
+
+<div class="game-board">
+  <div class="score-board">
+    <p>Гравець: {{ playerScore }}</p>
+    <p>Комп'ютер: {{ computerScore }}</p>
+  </div>
+  <input
+    type="number"
+    [(ngModel)]="timeLimit"
+    min="100"
+    placeholder="Час з'явлення колонок (мс)"
+  />
+  <button class="blue-button" (click)="startGame()" [disabled]="gameStarted">Почати</button>
+  <table>
+    <tr *ngFor="let row of cells; let i = index">
+      <td *ngFor="let cell of row; let j = index" (click)="cellClicked(i, j)" [class]="cell"></td>
+    </tr>
+  </table>
+</div>
+
+<app-game-over-dialog
+  *ngIf="isShowGameOverModal"
+  [winner]="winner"
+  [playerScore]="playerScore"
+  [computerScore]="computerScore"
+  (closeModalEvent)="closeModalHandler()"
+></app-game-over-dialog>

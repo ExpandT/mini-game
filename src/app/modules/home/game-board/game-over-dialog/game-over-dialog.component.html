@@ -1,0 +1,8 @@
+<div class="modal">
+  <h1>{{ winner }} виграв!</h1>
+  <p>Гравець: {{ playerScore }}</p>
+  <p>Комп'ютер: {{ computerScore }}</p>
+  <button class="blue-button" (click)="closeModal()">Закрити</button>
+</div>
+<div class="overlay" (click)="closeModal()"></div>
+

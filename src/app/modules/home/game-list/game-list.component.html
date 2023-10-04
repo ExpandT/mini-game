@@ -1,0 +1,13 @@
+<h1 class="heading">Список Ігор</h1>
+
+<div class="game-list-container">
+
+  <app-game-card
+    *ngFor="let gameCard of gameList"
+    [gameName]="gameCard?.name!"
+    [gameDescription]="gameCard?.description!"
+    [gameImgSrc]="gameCard?.imgSrc!"
+    [gameRouterLink]="gameCard?.routerLink!"
+  ></app-game-card>
+
+</div>
